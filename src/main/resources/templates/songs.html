@@ -8,8 +8,8 @@
 	<a th:replace="frammenti :: header"></a>
     <div>
 	  <h1>Le canzoni più ascoltate</h1>
-	  <ul th:each="song : ${songs}">
-		<a th:href="@{'/songs/' + ${song.getId()}}"><li th:text="${song}"></li></a>
+	  <ul>
+		<li th:each="song : ${songs}"><a th:href="@{'/songs/' + ${song.getId()}}" th:text="${song}"></li>
 	  </ul>
     </div> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

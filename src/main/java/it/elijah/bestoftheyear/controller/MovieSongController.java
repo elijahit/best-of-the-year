@@ -56,7 +56,8 @@ public class MovieSongController {
 	}
 	
 	private List<Song> getBestSongs() {
-		return SongsData.getList();
+		SongsData songs = new SongsData();
+		return songs.getList();
 	}
 }
 
